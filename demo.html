@@ -3,65 +3,77 @@
 	<head>
 		<title>jrvis - Trunk8</title>
 		
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 		<style>
-			.wrapper {
-				border: 2px solid #000;
-				line-height: 20px;
-				width: 676px;
-			}
-			
 			.trunk8-fill {
 				color: #f00;
 				font-weight: bold;
+			}
+
+			.btn-half {
+				width: 49%;
 			}
 		</style>
 	</head>
 	
 	<body>
 		
-		<div class="wrapper">
-			<span id="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
-		</div>
-		
-		<div>
-			<button id="widen">Widen</button>
-			
-			<button id="shorten">Shorten</button>
-		</div>
-		
-		<div>
-			<button id="addline">Add Line</button>
-			
-			<button id="removeline">Remove Line</button>
-		</div>
-		
-		<div>
-			<button id="retrunk8">Retrunk8</button>
-		</div>
-		
-		<div>
-			<label>Left <input type="radio" name="trunk8side" value="left"/></label>
-			
-			<label>Center <input type="radio" name="trunk8side" value="center"/></label>
-			
-			<label>Right <input type="radio" name="trunk8side" value="right" checked/></label>
-		</div>
-		
-		<div>
-			<label>
-				Fill
-				
-				<select id="fill">
-					<option value="&amp;hellip;" selected>&hellip;</option>
-					<option value="[snip]">[snip]</option>
-					<option value="&lt;span class=&quot;trunk8-fill&quot;>snip&lt;/span>">&lt;span class=&quot;trunk8-fill&quot;>snip&lt;/span></option>
-					<option value="&amp;nbsp;&lt;a href=&quot;#&quot;>read more&lt;/a>">&nbsp;&lt;a href=&quot;#&quot;>read more&lt;/a></option>
-				</select>
-			</label>
-		</div>
-		
-		<div>
-			<pre id="settings"></pre>
+    <div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<h2>Trunk8 Demo</h2>
+					<br>
+					<div class="panel panel-default wrapper">
+						<div class="panel-body">
+						  <span id="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</span>
+						</div>
+					</div>
+					<br>
+					
+					<div class="row">
+				    <div class="col-md-6">
+							<button id="widen" class='btn btn-default btn-half'>Widen</button>
+							<button id="shorten" class='btn btn-default btn-half'>Shorten</button>
+						
+							<br>
+							<br>
+
+							<button id="addline" class='btn btn-default btn-half'>Add Line</button>
+							<button id="removeline" class='btn btn-default btn-half'>Remove Line</button>
+
+							<br>
+							<br>
+
+							<button id="retrunk8" class='btn btn-default btn-block'>Retrunk8</button>
+
+						</div>
+						
+				    <div class="col-md-6">
+							<div>
+								<h5>Truncation Side</h5>
+								<label class="checkbox-inline"><input type="radio" name="trunk8side" value="left"> Left</label>
+								
+								<label class="checkbox-inline"><input type="radio" name="trunk8side" value="center"> Center</label>
+								
+								<label class="checkbox-inline"><input type="radio" name="trunk8side" value="right" checked> Right</label>
+							</div>
+							
+							<div>
+								<h5>Fill</h5>
+								<select id="fill" class="form-control">
+									<option value="&amp;hellip;" selected>&hellip;</option>
+									<option value="[snip]">[snip]</option>
+									<option value="&lt;span class=&quot;trunk8-fill&quot;>snip&lt;/span>">&lt;span class=&quot;trunk8-fill&quot;>snip&lt;/span></option>
+									<option value="&amp;nbsp;&lt;a href=&quot;#&quot;>read more&lt;/a>">&nbsp;&lt;a href=&quot;#&quot;>read more&lt;/a></option>
+								</select>
+							</div>
+						</div>
+				</div>
+				<br>
+				<div>
+					<pre id="settings"></pre>
+				</div>
+			</div>
 		</div>
 		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
