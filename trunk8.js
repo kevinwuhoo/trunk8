@@ -1,5 +1,5 @@
 /**!
- * trunk8 v1.3.3
+ * trunk8 v1.3.4
  * https://github.com/rviscomi/trunk8
  *
  * Copyright 2012 Rick Viscomi
